@@ -718,6 +718,8 @@ public class JaggerEasyDeployPlugin extends Builder
             }
         } catch (Exception e) {
 
+            logger.println("!!!" + getLineSeparator() + "Exception in perform(): " + e +
+                    "\nCan't create script file or run script");
             e.printStackTrace(logger);
             try {
                 pathToDeploymentScript.delete();
